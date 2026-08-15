@@ -1,0 +1,1107 @@
+{
+  "meta": {
+    "lastUpdated": "2026-08-13T07:41:34.794Z",
+    "snapshotLabel": "Aug 2026",
+    "scopeNote": "Polytechnics, Universities, ITE (short-course + Work-Study)"
+  },
+  "programmes": [
+    {
+      "name": "Diploma in Business Practice (Customer Experience & Relationship Management)",
+      "provider": "Nanyang Polytechnic",
+      "type": "nyp",
+      "area": "CX & RM",
+      "level": "Diploma (5 MCs, stackable)",
+      "duration": "900 hrs / 2.5 yrs PT",
+      "fee": "$25,197.80",
+      "feeNum": 25197.8,
+      "funding": "SkillsFuture Credit, WSS, PSEA, MCES",
+      "skills": "Service management, service marketing, CX design & management, customer intelligence, data analytics, issues management",
+      "overlap": "—",
+      "overlapClass": "overlap-none",
+      "overlapPct": null,
+      "nypMC": [],
+      "cert": "Diploma (Business Practice)",
+      "conf": "verified",
+      "nypModules": [],
+      "rationale": "This is NYP's own reference programme — not benchmarked against itself.",
+      "overlapRank": -1
+    },
+    {
+      "name": "Customer Experience Innovation (SCTP module)",
+      "provider": "Nanyang Polytechnic",
+      "type": "nyp",
+      "area": "CX",
+      "level": "Modular / CET unit",
+      "duration": "18 hrs",
+      "fee": "$840",
+      "feeNum": 840,
+      "funding": "SFC (Mid-Career), SCTP, WSS",
+      "skills": "Customer journey mapping, gap analysis, CX improvement implementation",
+      "overlap": "—",
+      "overlapClass": "overlap-none",
+      "overlapPct": null,
+      "nypMC": [
+        "MC5"
+      ],
+      "cert": "Statement of Attainment",
+      "conf": "verified",
+      "nypModules": [
+        "Customer Experience Design"
+      ],
+      "rationale": "This is a standalone NYP module offering, drawn directly from the Customer Experience Design module in MC5 — it is NYP's own content, not a competitor comparison.",
+      "overlapRank": -1
+    },
+    {
+      "name": "Service Management (SCTP module)",
+      "provider": "Nanyang Polytechnic",
+      "type": "nyp",
+      "area": "Service Excellence",
+      "level": "Modular / CET unit",
+      "duration": "40 hrs",
+      "fee": "$849",
+      "feeNum": 849,
+      "funding": "SFC (Mid-Career), SCTP, WSS",
+      "skills": "Complaint management, service guarantees, service quality assurance",
+      "overlap": "—",
+      "overlapClass": "overlap-none",
+      "overlapPct": null,
+      "nypMC": [
+        "MC3"
+      ],
+      "cert": "Statement of Attainment",
+      "conf": "verified",
+      "nypModules": [
+        "Service Operations",
+        "Issues Management"
+      ],
+      "rationale": "This is a standalone NYP module offering, drawn directly from the Service Operations and Issues Management modules in MC3 — NYP's own content, not a competitor comparison.",
+      "overlapRank": -1
+    },
+    {
+      "name": "Specialist Diploma in Customer Experience Design and Analytics",
+      "provider": "Republic Polytechnic (with SUSS)",
+      "type": "poly",
+      "area": "CX",
+      "level": "Specialist Diploma",
+      "duration": "~1 yr PT (typical SD)",
+      "fee": "~$5,000-7,000 (typical SD range)",
+      "feeNum": 6000,
+      "funding": "SkillsFuture Credit, subsidies",
+      "skills": "Customer & guest management, UX, branding, service marketing, relationship management, CX analytics",
+      "overlap": "High",
+      "overlapClass": "overlap-high",
+      "overlapPct": 78,
+      "nypMC": [
+        "MC5",
+        "MC4"
+      ],
+      "cert": "Specialist Diploma",
+      "conf": "estimated",
+      "nypModules": [
+        "Customer Experience Design",
+        "Customer Intelligence & Analytics",
+        "Customer Management & Retention",
+        "Consumer Psychology"
+      ],
+      "rationale": "Matched: customer & guest management and CX analytics map onto <em>Customer Experience Design</em> and <em>Customer Intelligence & Analytics</em>; relationship management maps onto <em>Customer Management & Retention</em>; branding/UX psychology maps onto <em>Consumer Psychology</em>. Capped by: no coverage of NYP's business-essentials modules (statistics, accounting, applied economics) or people/team management — it's a pure CX/marketing specialist diploma, not a broader business diploma.",
+      "overlapRank": 3
+    },
+    {
+      "name": "Customer Service Management (modular unit, Dip. Business Practice - Business Admin)",
+      "provider": "Temasek Polytechnic",
+      "type": "poly",
+      "area": "Service Excellence",
+      "level": "Modular / stackable to Diploma",
+      "duration": "Modular",
+      "fee": "$395-467",
+      "feeNum": 430,
+      "funding": "SkillsFuture Subsidies, SFC",
+      "skills": "Frontline & contact centre service excellence, complaint handling, service philosophy",
+      "overlap": "Medium",
+      "overlapClass": "overlap-med",
+      "overlapPct": 48,
+      "nypMC": [
+        "MC3"
+      ],
+      "cert": "Statement of Result → Diploma in Business Practice",
+      "conf": "verified",
+      "nypModules": [
+        "Service Operations",
+        "Issues Management"
+      ],
+      "rationale": "Matched: frontline and contact-centre service excellence maps onto <em>Service Operations</em>; complaint handling and service guarantees map onto <em>Issues Management</em>. Capped by: no CX design, digital marketing, or analytics content — this is a single entry-level modular unit, not a full diploma.",
+      "overlapRank": 2
+    },
+    {
+      "name": "Specialist Diploma in Digital Marketing & Analytics (NSDMA)",
+      "provider": "Singapore Polytechnic",
+      "type": "poly",
+      "area": "Marketing",
+      "level": "Specialist Diploma",
+      "duration": "1 yr PT",
+      "fee": "~$6,000-7,000 (indicative)",
+      "feeNum": 6500,
+      "funding": "SkillsFuture Credit, subsidies",
+      "skills": "Digital marketing strategy & analytics, social media marketing, e-commerce, brand visibility",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 22,
+      "nypMC": [
+        "MC4"
+      ],
+      "cert": "Specialist Diploma",
+      "conf": "unconfirmed",
+      "nypModules": [
+        "Digital Marketing",
+        "Market Research & Intelligence"
+      ],
+      "rationale": "Matched: digital marketing strategy and analytics maps onto <em>Digital Marketing</em> and <em>Market Research & Intelligence</em>. Capped by: no service management, CX design, or stakeholder relationship content — this is a marketing specialist diploma, not a service/CX one.",
+      "overlapRank": 1
+    },
+    {
+      "name": "SP-SUSS Specialist Diploma in Digital Content Marketing (incl. Work-Study pathway)",
+      "provider": "Singapore Polytechnic / SUSS",
+      "type": "poly",
+      "area": "Marketing",
+      "level": "Specialist Diploma / Work-Study",
+      "duration": "12 mth work-study or PT diploma",
+      "fee": "Course fee + AP funding for employers",
+      "feeNum": null,
+      "funding": "SkillsFuture Credit, Absentee Payroll",
+      "skills": "Content creation, social media management, branding, marketing communications",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 18,
+      "nypMC": [
+        "MC4"
+      ],
+      "cert": "Specialist Diploma",
+      "conf": "verified",
+      "nypModules": [
+        "Digital Marketing"
+      ],
+      "rationale": "Matched: content creation and social media management map onto the content-marketing angle of <em>Digital Marketing</em>. Capped by: no service, CX design, or customer analytics content at all — narrowly focused on content production.",
+      "overlapRank": 1
+    },
+    {
+      "name": "Customer Relationship Management (BUS354)",
+      "provider": "SUSS",
+      "type": "uni",
+      "area": "RM",
+      "level": "Undergrad CET course / stackable",
+      "duration": "Course-level (credit-bearing)",
+      "fee": "$11,880 (course-level fee shown, varies)",
+      "feeNum": 11880,
+      "funding": "SkillsFuture Credit, MCES",
+      "skills": "Customer lifecycle strategy, CRM data & segmentation, IDIC framework, customer analytics",
+      "overlap": "High",
+      "overlapClass": "overlap-high",
+      "overlapPct": 72,
+      "nypMC": [
+        "MC5",
+        "MC3"
+      ],
+      "cert": "Credit-bearing course, stackable to degree",
+      "conf": "verified",
+      "nypModules": [
+        "Customer Intelligence & Analytics",
+        "Customer Management & Retention",
+        "Stakeholder Relationship Management"
+      ],
+      "rationale": "Matched: customer lifecycle strategy and CRM data/segmentation map onto <em>Customer Intelligence & Analytics</em> and <em>Customer Management & Retention</em>; the IDIC framework (Identify, Differentiate, Interact, Customise) maps onto <em>Stakeholder Relationship Management</em>. Capped by: no CX experience-design (journey mapping, service blueprinting) or service-marketing execution content — strong on relationship/data strategy, narrower on design and marketing execution.",
+      "overlapRank": 3
+    },
+    {
+      "name": "Customer Experience Management (Graduate Diploma module)",
+      "provider": "SUSS",
+      "type": "uni",
+      "area": "CX",
+      "level": "Graduate Diploma module",
+      "duration": "Course-level",
+      "fee": "Graduate-level fee (varies)",
+      "feeNum": null,
+      "funding": "SkillsFuture Credit, subsidies",
+      "skills": "CX assessment, organisation-wide CX process design",
+      "overlap": "High",
+      "overlapClass": "overlap-high",
+      "overlapPct": 68,
+      "nypMC": [
+        "MC5"
+      ],
+      "cert": "Stackable to Graduate Diploma in Management",
+      "conf": "unconfirmed",
+      "nypModules": [
+        "Customer Experience Design"
+      ],
+      "rationale": "Matched: CX assessment and organisation-wide CX process design map closely onto <em>Customer Experience Design</em> — a near 1:1 conceptual match. Capped by: it's a single graduate-level module, so it doesn't extend into customer intelligence/analytics, retention, or the service/marketing MCs — high match quality, narrow scope.",
+      "overlapRank": 3
+    },
+    {
+      "name": "Integrated Marketing Communications (MKT358)",
+      "provider": "SUSS",
+      "type": "uni",
+      "area": "Marketing",
+      "level": "Undergrad CET course",
+      "duration": "Course-level",
+      "fee": "Course-level fee (varies)",
+      "feeNum": null,
+      "funding": "SkillsFuture Credit",
+      "skills": "IMC strategy, PR, corporate communication, creative advertising & copywriting",
+      "overlap": "Medium",
+      "overlapClass": "overlap-med",
+      "overlapPct": 42,
+      "nypMC": [
+        "MC4",
+        "MC1"
+      ],
+      "cert": "Credit-bearing, stackable to degree",
+      "conf": "unconfirmed",
+      "nypModules": [
+        "Digital Marketing",
+        "Business Communication"
+      ],
+      "rationale": "Matched: campaign and communications execution partially maps onto <em>Digital Marketing</em>; professional messaging skills touch <em>Business Communication</em>. Capped by: the course's core focus — PR, advertising, copywriting — sits outside NYP's CXRM scope entirely, which doesn't teach traditional advertising/PR craft.",
+      "overlapRank": 2
+    },
+    {
+      "name": "Master of Digital Marketing / Graduate Certificate in Digital Marketing",
+      "provider": "SUSS",
+      "type": "uni",
+      "area": "Marketing",
+      "level": "Postgrad (stackable GCDM → GDDM → Masters)",
+      "duration": "Modular, stackable",
+      "fee": "Substantially SkillsFuture-funded (PT)",
+      "feeNum": null,
+      "funding": "SkillsFuture funding (significant)",
+      "skills": "SEO/SEM, social, e-commerce, marketing analytics, strategy/analytics/design clusters",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 20,
+      "nypMC": [
+        "MC4"
+      ],
+      "cert": "Grad Cert → Grad Dip → Masters",
+      "conf": "verified",
+      "nypModules": [
+        "Digital Marketing",
+        "Market Research & Intelligence"
+      ],
+      "rationale": "Matched: SEO/SEM and marketing analytics map onto <em>Digital Marketing</em> and <em>Market Research & Intelligence</em>. Capped by: postgraduate depth (advanced analytics, strategy/design specialisation clusters) goes well beyond NYP's single-module treatment of digital marketing — relative overlap is modest despite topical alignment.",
+      "overlapRank": 1
+    },
+    {
+      "name": "Specialist Certificate in Digital Content Marketing",
+      "provider": "SUSS",
+      "type": "uni",
+      "area": "Marketing",
+      "level": "Specialist Certificate → stackable to BSc Marketing",
+      "duration": "Modular, up to 3 yrs to complete",
+      "fee": "$60 application + course fees",
+      "feeNum": 60,
+      "funding": "SkillsFuture Credit",
+      "skills": "Content marketing, digital storytelling",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 15,
+      "nypMC": [
+        "MC4"
+      ],
+      "cert": "Specialist Certificate, pathway to BSc Marketing",
+      "conf": "verified",
+      "nypModules": [
+        "Digital Marketing"
+      ],
+      "rationale": "Matched: content marketing and storytelling map onto a narrow slice of <em>Digital Marketing</em>. Capped by: no service, CX, or analytics content — a single-topic specialist certificate.",
+      "overlapRank": 1
+    },
+    {
+      "name": "Work-Study Post-Diploma (WSPostDip) programmes",
+      "provider": "SUSS (with all 5 Polytechnics)",
+      "type": "uni",
+      "area": "CX / RM / Marketing (varies by track)",
+      "level": "Post-diploma, work-study",
+      "duration": "12 mths, OJT + coursework",
+      "fee": "Employer co-funded",
+      "feeNum": null,
+      "funding": "SkillsFuture Work-Study support, AP",
+      "skills": "Varies by track; credits stack toward SUSS degree",
+      "overlap": "Medium",
+      "overlapClass": "overlap-med",
+      "overlapPct": 38,
+      "nypMC": [
+        "MC3",
+        "MC5"
+      ],
+      "cert": "Post-Diploma, stackable to degree",
+      "conf": "verified",
+      "nypModules": [
+        "Service Operations",
+        "Customer Experience Design"
+      ],
+      "rationale": "Matched: varies by track, but where CX/service tracks apply, maps onto <em>Service Operations</em> and <em>Customer Experience Design</em>. Capped by: track-dependent — some WSPostDip tracks run in unrelated disciplines entirely, so this is a directional average across the CX/RM/Marketing-relevant tracks only.",
+      "overlapRank": 2
+    },
+    {
+      "name": "Customer Experience Management (Level 1 & 2, WSQ)",
+      "provider": "ITE",
+      "type": "ite",
+      "area": "CX (entry-level, retail focus)",
+      "level": "WSQ Statement of Attainment, 2 levels",
+      "duration": "Short course, modular",
+      "fee": "Low (WSQ-subsidised)",
+      "feeNum": null,
+      "funding": "WSQ subsidies, SkillsFuture Credit",
+      "skills": "L1: CX & CRM fundamentals; L2: CRM data use, loyalty, inventory, sales targets",
+      "overlap": "Medium",
+      "overlapClass": "overlap-med",
+      "overlapPct": 45,
+      "nypMC": [
+        "MC5",
+        "MC3"
+      ],
+      "cert": "WSQ Statement of Attainment",
+      "conf": "verified",
+      "nypModules": [
+        "Customer Management & Retention",
+        "Stakeholder Relationship Management"
+      ],
+      "rationale": "Matched: CRM data use and loyalty programme content map onto <em>Customer Management & Retention</em>; CX/CRM fundamentals map onto <em>Stakeholder Relationship Management</em> (foundational level). Capped by: retail-floor content — inventory management, sales targets, running a store — sits outside NYP's diploma scope, which doesn't cover retail operations.",
+      "overlapRank": 2
+    },
+    {
+      "name": "SkillsFuture Series Certificate of Competency (Business & Service track)",
+      "provider": "ITE",
+      "type": "ite",
+      "area": "Service Excellence",
+      "level": "Short, practical CoC",
+      "duration": "Short (hours-days)",
+      "fee": "Low, SkillsFuture Credit eligible",
+      "feeNum": null,
+      "funding": "SkillsFuture Credit, subsidies",
+      "skills": "Design thinking for service, business fundamentals, wellness/hospitality service skills",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 12,
+      "nypMC": [
+        "MC5"
+      ],
+      "cert": "Certificate of Competency",
+      "conf": "verified",
+      "nypModules": [
+        "Customer Experience Design"
+      ],
+      "rationale": "Matched: design thinking for service touches <em>Customer Experience Design</em> conceptually. Capped by: this is a short, generic Certificate of Competency, not a deep service/CX curriculum — minimal structured overlap.",
+      "overlapRank": 1
+    },
+    {
+      "name": "Work-Study Diploma in Customer Experience Management (Lifestyle & Consumer)",
+      "provider": "ITE College West",
+      "type": "ite-ws",
+      "area": "CX",
+      "level": "Work-Study Diploma",
+      "duration": "30 months (day-release + OJT)",
+      "fee": "Employer-sponsored (fully)",
+      "feeNum": 0,
+      "funding": "WSDip: employer-funded via SWDA, ETSS up to 90% for SMEs, ITE Opportunity Fund",
+      "skills": "Consumer behaviour analysis, personalised customer content, sales & e-commerce services, service experience & UX design, customer service & quality, digital marketing operations, AI solutions",
+      "overlap": "Medium",
+      "overlapClass": "overlap-med",
+      "overlapPct": 52,
+      "nypMC": [
+        "MC5",
+        "MC4",
+        "MC3"
+      ],
+      "cert": "Work-Study Diploma (WSDip)",
+      "conf": "verified",
+      "nypModules": [
+        "Customer Experience Design",
+        "Customer Intelligence & Analytics",
+        "Digital Marketing",
+        "Stakeholder Relationship Management"
+      ],
+      "rationale": "Matched: consumer behaviour analysis and personalised content map onto <em>Customer Experience Design</em> and <em>Customer Intelligence & Analytics</em>; digital marketing operations maps onto <em>Digital Marketing</em>; customer/stakeholder communication maps onto <em>Stakeholder Relationship Management</em> — the broadest match of any ITE Work-Study Diploma, spanning 3 MCs. Capped by: the AI-solutions-development outcome has no equivalent NYP module (NYP's diploma has no dedicated AI content), and this ITE diploma stops short of NYP's deeper analytics/retention modules.",
+      "overlapRank": 2
+    },
+    {
+      "name": "Work-Study Diploma in Customer Experience Management (Aviation Services)",
+      "provider": "ITE",
+      "type": "ite-ws",
+      "area": "CX (aviation/service ops)",
+      "level": "Work-Study Diploma",
+      "duration": "30 months (day-release + OJT)",
+      "fee": "Employer-sponsored (fully)",
+      "feeNum": 0,
+      "funding": "WSDip: employer-funded via SWDA, ETSS up to 90% for SMEs",
+      "skills": "Complex service request handling, design thinking, customer/service data analytics, team leadership, continuous improvement in high-volume service operations",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 28,
+      "nypMC": [
+        "MC3",
+        "MC5"
+      ],
+      "cert": "Work-Study Diploma (WSDip)",
+      "conf": "verified",
+      "nypModules": [
+        "Service Operations",
+        "Customer Experience Design"
+      ],
+      "rationale": "Matched: complex service request handling maps onto <em>Service Operations</em>; design-thinking elements partially map onto <em>Customer Experience Design</em>. Capped by: sector-specific aviation operations knowledge and team leadership in high-volume operations sit outside NYP's generalist CXRM diploma scope.",
+      "overlapRank": 1
+    },
+    {
+      "name": "Work-Study Diploma in E-commerce & Retail",
+      "provider": "ITE College Central",
+      "type": "ite-ws",
+      "area": "Retail / CX / Marketing",
+      "level": "Work-Study Diploma",
+      "duration": "30 months (day-release + OJT)",
+      "fee": "Employer-sponsored (fully)",
+      "feeNum": 0,
+      "funding": "WSDip: employer-funded via SWDA, ETSS up to 90% for SMEs",
+      "skills": "In-store retail ops, customer immersive experience & service innovation, category management, e-commerce ops & marketing, retail analytics, business strategy, leadership",
+      "overlap": "Medium",
+      "overlapClass": "overlap-med",
+      "overlapPct": 44,
+      "nypMC": [
+        "MC4",
+        "MC3",
+        "MC2",
+        "MC1"
+      ],
+      "cert": "Work-Study Diploma (WSDip)",
+      "conf": "verified",
+      "nypModules": [
+        "Digital Marketing",
+        "Service Operations",
+        "Marketing Management",
+        "Data Analytics for Strategic Business Decisions"
+      ],
+      "rationale": "Matched: e-commerce operations & marketing maps onto <em>Digital Marketing</em>; customer immersive experience & service innovation maps onto <em>Service Operations</em>; category management/business strategy maps onto <em>Marketing Management</em>; retail analytics maps onto <em>Data Analytics for Strategic Business Decisions</em>. Capped by: in-store retail operations, logistics & supply chain, and leadership/people management (3 of 8 listed learning outcomes) have no equivalent in NYP's CXRM diploma, which is service/CX/marketing-focused rather than a retail-operations or supply-chain qualification.",
+      "overlapRank": 2
+    },
+    {
+      "name": "Work-Study Diploma in Media Communication & Digital Marketing",
+      "provider": "ITE",
+      "type": "ite-ws",
+      "area": "Marketing",
+      "level": "Work-Study Diploma",
+      "duration": "30 months (day-release + OJT)",
+      "fee": "Employer-sponsored (fully)",
+      "feeNum": 0,
+      "funding": "WSDip: employer-funded via SWDA, ETSS up to 90% for SMEs",
+      "skills": "Digital content development for service marketing, brand & content marketing, social media campaigns, email marketing, video advertisement production",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 24,
+      "nypMC": [
+        "MC4"
+      ],
+      "cert": "Work-Study Diploma (WSDip)",
+      "conf": "verified",
+      "nypModules": [
+        "Digital Marketing"
+      ],
+      "rationale": "Matched: digital content development for service marketing maps onto <em>Digital Marketing</em>. Capped by: graphic design, video production, and animation skills — core to this ITE diploma — sit entirely outside NYP's diploma, which doesn't teach content-production tools.",
+      "overlapRank": 1
+    },
+    {
+      "name": "SIM Academy executive & business programmes (CX / people mgmt strand)",
+      "provider": "SIM Academy",
+      "type": "private",
+      "area": "CX / Leadership crossover",
+      "level": "Executive short courses (600+ catalogue)",
+      "duration": "Varies, typically 1-3 days",
+      "fee": "Corporate/individual pricing, varies",
+      "feeNum": null,
+      "funding": "Case-by-case; some SkillsFuture-aligned",
+      "skills": "Applied CX & leadership, digital transformation crossover, people management",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 20,
+      "nypMC": [
+        "MC2",
+        "MC3"
+      ],
+      "cert": "Certificate of participation / completion",
+      "conf": "unconfirmed",
+      "nypModules": [
+        "People and Team Management",
+        "Service Operations"
+      ],
+      "rationale": "Matched: leadership/people management crossover maps onto <em>People and Team Management</em>; applied CX content partially maps onto <em>Service Operations</em>. Capped by: SIM's digital-transformation content and broad executive-education catalogue (600+ courses) sit largely outside the CXRM diploma's specific scope — this is an executive-education generalist, not a CX specialist.",
+      "overlapRank": 1
+    },
+    {
+      "name": "ClickAcademy Asia — Customer Engagement & Digital Marketing tracks",
+      "provider": "ClickAcademy Asia (private)",
+      "type": "private",
+      "area": "Marketing / CX",
+      "level": "Corporate training, short-form",
+      "duration": "Varies",
+      "fee": "Corporate pricing",
+      "feeNum": null,
+      "funding": "Some SkillsFuture-aligned modules",
+      "skills": "B2B sales, digital marketing, customer engagement, AI-in-marketing",
+      "overlap": "Low",
+      "overlapClass": "overlap-low",
+      "overlapPct": 18,
+      "nypMC": [
+        "MC4"
+      ],
+      "cert": "Certificate of completion",
+      "conf": "unconfirmed",
+      "nypModules": [
+        "Digital Marketing"
+      ],
+      "rationale": "Matched: digital marketing and AI-in-marketing content partially maps onto <em>Digital Marketing</em>. Capped by: B2B sales content and generic 'customer engagement' framing don't map onto any specific NYP module — largely a corporate-training generalist rather than CX-curriculum-aligned.",
+      "overlapRank": 1
+    },
+    {
+      "name": "Singapore Airlines Academy — bespoke CX capability programmes (e.g. AIA Singapore partnership)",
+      "provider": "Singapore Airlines Academy",
+      "type": "industry",
+      "area": "CX / Service Excellence (bespoke, B2B)",
+      "level": "Corporate bespoke workshop series",
+      "duration": "Multi-workshop, rolled out progressively",
+      "fee": "Bespoke contract (not public)",
+      "feeNum": null,
+      "funding": "Employer-funded, outside SkillsFuture course directory",
+      "skills": "CX culture transformation, service mindset, storytelling, scenario-based service excellence",
+      "overlap": "None",
+      "overlapClass": "overlap-none",
+      "overlapPct": 3,
+      "nypMC": [
+        "MC3",
+        "MC5"
+      ],
+      "cert": "Internal/bespoke — no public certification",
+      "conf": "verified",
+      "nypModules": [
+        "Service Excellence Project (WIU)",
+        "Customer Experience Design"
+      ],
+      "rationale": "Matched: CX culture transformation and service mindset are thematically adjacent to <em>Service Excellence Project</em> and <em>Customer Experience Design</em>. Capped by: this is bespoke, non-formal corporate delivery with no public syllabus — the match is conceptual/thematic only, not curricular, hence the lowest score in the tracker.",
+      "overlapRank": 0
+    }
+  ],
+  "nypModuleRegistry": [
+    {
+      "mc": "MC1",
+      "mcName": "Business Essentials & Data Analytics",
+      "module": "Business Communication",
+      "hrs": 45
+    },
+    {
+      "mc": "MC1",
+      "mcName": "Business Essentials & Data Analytics",
+      "module": "Applied Statistics for Business",
+      "hrs": 45
+    },
+    {
+      "mc": "MC1",
+      "mcName": "Business Essentials & Data Analytics",
+      "module": "Data Analytics for Strategic Business Decisions",
+      "hrs": 45
+    },
+    {
+      "mc": "MC1",
+      "mcName": "Business Essentials & Data Analytics",
+      "module": "Optimising Business Operations with Essential Technology",
+      "hrs": 45
+    },
+    {
+      "mc": "MC2",
+      "mcName": "Business Operations & Management",
+      "module": "Applied Economics for Business",
+      "hrs": 60
+    },
+    {
+      "mc": "MC2",
+      "mcName": "Business Operations & Management",
+      "module": "People and Team Management",
+      "hrs": 45
+    },
+    {
+      "mc": "MC2",
+      "mcName": "Business Operations & Management",
+      "module": "Marketing Management",
+      "hrs": 45
+    },
+    {
+      "mc": "MC2",
+      "mcName": "Business Operations & Management",
+      "module": "Accounting Fundamentals",
+      "hrs": 30
+    },
+    {
+      "mc": "MC3",
+      "mcName": "Service Management",
+      "module": "Stakeholder Relationship Management",
+      "hrs": 45
+    },
+    {
+      "mc": "MC3",
+      "mcName": "Service Management",
+      "module": "Service Operations",
+      "hrs": 45
+    },
+    {
+      "mc": "MC3",
+      "mcName": "Service Management",
+      "module": "Issues Management",
+      "hrs": 45
+    },
+    {
+      "mc": "MC3",
+      "mcName": "Service Management",
+      "module": "Service Excellence Project (WIU)",
+      "hrs": 45
+    },
+    {
+      "mc": "MC4",
+      "mcName": "Service Marketing",
+      "module": "Consumer Psychology",
+      "hrs": 45
+    },
+    {
+      "mc": "MC4",
+      "mcName": "Service Marketing",
+      "module": "Market Research & Intelligence",
+      "hrs": 45
+    },
+    {
+      "mc": "MC4",
+      "mcName": "Service Marketing",
+      "module": "Digital Marketing",
+      "hrs": 45
+    },
+    {
+      "mc": "MC4",
+      "mcName": "Service Marketing",
+      "module": "Service Marketing Project (WIU)",
+      "hrs": 45
+    },
+    {
+      "mc": "MC5",
+      "mcName": "Customer Experience Design & Management",
+      "module": "Customer Intelligence & Analytics",
+      "hrs": 45
+    },
+    {
+      "mc": "MC5",
+      "mcName": "Customer Experience Design & Management",
+      "module": "Customer Experience Design",
+      "hrs": 45
+    },
+    {
+      "mc": "MC5",
+      "mcName": "Customer Experience Design & Management",
+      "module": "Customer Management & Retention",
+      "hrs": 45
+    },
+    {
+      "mc": "MC5",
+      "mcName": "Customer Experience Design & Management",
+      "module": "CXRM Project (WIU)",
+      "hrs": 45
+    }
+  ],
+  "nypModuleMap": {
+    "Diploma in Business Practice (Customer Experience & Relationship Management)": [],
+    "Customer Experience Innovation (SCTP module)": [
+      "Customer Experience Design"
+    ],
+    "Service Management (SCTP module)": [
+      "Service Operations",
+      "Issues Management"
+    ],
+    "Specialist Diploma in Customer Experience Design and Analytics": [
+      "Customer Experience Design",
+      "Customer Intelligence & Analytics",
+      "Customer Management & Retention",
+      "Consumer Psychology"
+    ],
+    "Customer Service Management (modular unit, Dip. Business Practice - Business Admin)": [
+      "Service Operations",
+      "Issues Management"
+    ],
+    "Specialist Diploma in Digital Marketing & Analytics (NSDMA)": [
+      "Digital Marketing",
+      "Market Research & Intelligence"
+    ],
+    "SP-SUSS Specialist Diploma in Digital Content Marketing (incl. Work-Study pathway)": [
+      "Digital Marketing"
+    ],
+    "Customer Relationship Management (BUS354)": [
+      "Customer Intelligence & Analytics",
+      "Customer Management & Retention",
+      "Stakeholder Relationship Management"
+    ],
+    "Customer Experience Management (Graduate Diploma module)": [
+      "Customer Experience Design"
+    ],
+    "Integrated Marketing Communications (MKT358)": [
+      "Digital Marketing",
+      "Business Communication"
+    ],
+    "Master of Digital Marketing / Graduate Certificate in Digital Marketing": [
+      "Digital Marketing",
+      "Market Research & Intelligence"
+    ],
+    "Specialist Certificate in Digital Content Marketing": [
+      "Digital Marketing"
+    ],
+    "Work-Study Post-Diploma (WSPostDip) programmes": [
+      "Service Operations",
+      "Customer Experience Design"
+    ],
+    "Customer Experience Management (Level 1 & 2, WSQ)": [
+      "Customer Management & Retention",
+      "Stakeholder Relationship Management"
+    ],
+    "SkillsFuture Series Certificate of Competency (Business & Service track)": [
+      "Customer Experience Design"
+    ],
+    "Work-Study Diploma in Customer Experience Management (Lifestyle & Consumer)": [
+      "Customer Experience Design",
+      "Customer Intelligence & Analytics",
+      "Digital Marketing",
+      "Stakeholder Relationship Management"
+    ],
+    "Work-Study Diploma in Customer Experience Management (Aviation Services)": [
+      "Service Operations",
+      "Customer Experience Design"
+    ],
+    "Work-Study Diploma in E-commerce & Retail": [
+      "Digital Marketing",
+      "Service Operations",
+      "Marketing Management",
+      "Data Analytics for Strategic Business Decisions"
+    ],
+    "Work-Study Diploma in Media Communication & Digital Marketing": [
+      "Digital Marketing"
+    ],
+    "SIM Academy executive & business programmes (CX / people mgmt strand)": [
+      "People and Team Management",
+      "Service Operations"
+    ],
+    "ClickAcademy Asia — Customer Engagement & Digital Marketing tracks": [
+      "Digital Marketing"
+    ],
+    "Singapore Airlines Academy — bespoke CX capability programmes (e.g. AIA Singapore partnership)": [
+      "Service Excellence Project (WIU)",
+      "Customer Experience Design"
+    ]
+  },
+  "rationaleMap": {
+    "Diploma in Business Practice (Customer Experience & Relationship Management)": "This is NYP's own reference programme — not benchmarked against itself.",
+    "Customer Experience Innovation (SCTP module)": "This is a standalone NYP module offering, drawn directly from the Customer Experience Design module in MC5 — it is NYP's own content, not a competitor comparison.",
+    "Service Management (SCTP module)": "This is a standalone NYP module offering, drawn directly from the Service Operations and Issues Management modules in MC3 — NYP's own content, not a competitor comparison.",
+    "Specialist Diploma in Customer Experience Design and Analytics": "Matched: customer & guest management and CX analytics map onto <em>Customer Experience Design</em> and <em>Customer Intelligence & Analytics</em>; relationship management maps onto <em>Customer Management & Retention</em>; branding/UX psychology maps onto <em>Consumer Psychology</em>. Capped by: no coverage of NYP's business-essentials modules (statistics, accounting, applied economics) or people/team management — it's a pure CX/marketing specialist diploma, not a broader business diploma.",
+    "Customer Service Management (modular unit, Dip. Business Practice - Business Admin)": "Matched: frontline and contact-centre service excellence maps onto <em>Service Operations</em>; complaint handling and service guarantees map onto <em>Issues Management</em>. Capped by: no CX design, digital marketing, or analytics content — this is a single entry-level modular unit, not a full diploma.",
+    "Specialist Diploma in Digital Marketing & Analytics (NSDMA)": "Matched: digital marketing strategy and analytics maps onto <em>Digital Marketing</em> and <em>Market Research & Intelligence</em>. Capped by: no service management, CX design, or stakeholder relationship content — this is a marketing specialist diploma, not a service/CX one.",
+    "SP-SUSS Specialist Diploma in Digital Content Marketing (incl. Work-Study pathway)": "Matched: content creation and social media management map onto the content-marketing angle of <em>Digital Marketing</em>. Capped by: no service, CX design, or customer analytics content at all — narrowly focused on content production.",
+    "Customer Relationship Management (BUS354)": "Matched: customer lifecycle strategy and CRM data/segmentation map onto <em>Customer Intelligence & Analytics</em> and <em>Customer Management & Retention</em>; the IDIC framework (Identify, Differentiate, Interact, Customise) maps onto <em>Stakeholder Relationship Management</em>. Capped by: no CX experience-design (journey mapping, service blueprinting) or service-marketing execution content — strong on relationship/data strategy, narrower on design and marketing execution.",
+    "Customer Experience Management (Graduate Diploma module)": "Matched: CX assessment and organisation-wide CX process design map closely onto <em>Customer Experience Design</em> — a near 1:1 conceptual match. Capped by: it's a single graduate-level module, so it doesn't extend into customer intelligence/analytics, retention, or the service/marketing MCs — high match quality, narrow scope.",
+    "Integrated Marketing Communications (MKT358)": "Matched: campaign and communications execution partially maps onto <em>Digital Marketing</em>; professional messaging skills touch <em>Business Communication</em>. Capped by: the course's core focus — PR, advertising, copywriting — sits outside NYP's CXRM scope entirely, which doesn't teach traditional advertising/PR craft.",
+    "Master of Digital Marketing / Graduate Certificate in Digital Marketing": "Matched: SEO/SEM and marketing analytics map onto <em>Digital Marketing</em> and <em>Market Research & Intelligence</em>. Capped by: postgraduate depth (advanced analytics, strategy/design specialisation clusters) goes well beyond NYP's single-module treatment of digital marketing — relative overlap is modest despite topical alignment.",
+    "Specialist Certificate in Digital Content Marketing": "Matched: content marketing and storytelling map onto a narrow slice of <em>Digital Marketing</em>. Capped by: no service, CX, or analytics content — a single-topic specialist certificate.",
+    "Work-Study Post-Diploma (WSPostDip) programmes": "Matched: varies by track, but where CX/service tracks apply, maps onto <em>Service Operations</em> and <em>Customer Experience Design</em>. Capped by: track-dependent — some WSPostDip tracks run in unrelated disciplines entirely, so this is a directional average across the CX/RM/Marketing-relevant tracks only.",
+    "Customer Experience Management (Level 1 & 2, WSQ)": "Matched: CRM data use and loyalty programme content map onto <em>Customer Management & Retention</em>; CX/CRM fundamentals map onto <em>Stakeholder Relationship Management</em> (foundational level). Capped by: retail-floor content — inventory management, sales targets, running a store — sits outside NYP's diploma scope, which doesn't cover retail operations.",
+    "SkillsFuture Series Certificate of Competency (Business & Service track)": "Matched: design thinking for service touches <em>Customer Experience Design</em> conceptually. Capped by: this is a short, generic Certificate of Competency, not a deep service/CX curriculum — minimal structured overlap.",
+    "Work-Study Diploma in Customer Experience Management (Lifestyle & Consumer)": "Matched: consumer behaviour analysis and personalised content map onto <em>Customer Experience Design</em> and <em>Customer Intelligence & Analytics</em>; digital marketing operations maps onto <em>Digital Marketing</em>; customer/stakeholder communication maps onto <em>Stakeholder Relationship Management</em> — the broadest match of any ITE Work-Study Diploma, spanning 3 MCs. Capped by: the AI-solutions-development outcome has no equivalent NYP module (NYP's diploma has no dedicated AI content), and this ITE diploma stops short of NYP's deeper analytics/retention modules.",
+    "Work-Study Diploma in Customer Experience Management (Aviation Services)": "Matched: complex service request handling maps onto <em>Service Operations</em>; design-thinking elements partially map onto <em>Customer Experience Design</em>. Capped by: sector-specific aviation operations knowledge and team leadership in high-volume operations sit outside NYP's generalist CXRM diploma scope.",
+    "Work-Study Diploma in E-commerce & Retail": "Matched: e-commerce operations & marketing maps onto <em>Digital Marketing</em>; customer immersive experience & service innovation maps onto <em>Service Operations</em>; category management/business strategy maps onto <em>Marketing Management</em>; retail analytics maps onto <em>Data Analytics for Strategic Business Decisions</em>. Capped by: in-store retail operations, logistics & supply chain, and leadership/people management (3 of 8 listed learning outcomes) have no equivalent in NYP's CXRM diploma, which is service/CX/marketing-focused rather than a retail-operations or supply-chain qualification.",
+    "Work-Study Diploma in Media Communication & Digital Marketing": "Matched: digital content development for service marketing maps onto <em>Digital Marketing</em>. Capped by: graphic design, video production, and animation skills — core to this ITE diploma — sit entirely outside NYP's diploma, which doesn't teach content-production tools.",
+    "SIM Academy executive & business programmes (CX / people mgmt strand)": "Matched: leadership/people management crossover maps onto <em>People and Team Management</em>; applied CX content partially maps onto <em>Service Operations</em>. Capped by: SIM's digital-transformation content and broad executive-education catalogue (600+ courses) sit largely outside the CXRM diploma's specific scope — this is an executive-education generalist, not a CX specialist.",
+    "ClickAcademy Asia — Customer Engagement & Digital Marketing tracks": "Matched: digital marketing and AI-in-marketing content partially maps onto <em>Digital Marketing</em>. Capped by: B2B sales content and generic 'customer engagement' framing don't map onto any specific NYP module — largely a corporate-training generalist rather than CX-curriculum-aligned.",
+    "Singapore Airlines Academy — bespoke CX capability programmes (e.g. AIA Singapore partnership)": "Matched: CX culture transformation and service mindset are thematically adjacent to <em>Service Excellence Project</em> and <em>Customer Experience Design</em>. Capped by: this is bespoke, non-formal corporate delivery with no public syllabus — the match is conceptual/thematic only, not curricular, hence the lowest score in the tracker."
+  },
+  "competitors": [
+    {
+      "name": "Singapore University of Social Sciences (SUSS)",
+      "role": "Highest direct overlap — university-level CX, RM and Marketing CET spanning courses to Master's",
+      "points": [
+        "Deep, stackable ladder: Specialist Certificate → Grad Cert → Grad Dip → Master's in Digital Marketing",
+        "BUS354 Customer Relationship Management and MGT554 Customer Experience Management run as credit-bearing, stackable CET courses",
+        "Only university with formal Work-Study Post-Diploma agreements with all 5 polytechnics",
+        "Positioning: degree-pathway CET — appeals to learners wanting academic progression, not just a certificate"
+      ],
+      "tags": [
+        "University",
+        "High overlap",
+        "Degree pathway"
+      ]
+    },
+    {
+      "name": "Republic Polytechnic",
+      "role": "Direct poly competitor in CX",
+      "points": [
+        "Specialist Diploma in Customer Experience Design and Analytics, co-developed with SUSS",
+        "Explicitly covers relationship management, service marketing and business development — near-identical territory to NYP's Diploma in Business Practice (CX&RM)",
+        "SUSS co-development gives it a credible analytics/academic hook"
+      ],
+      "tags": [
+        "Polytechnic",
+        "High overlap"
+      ]
+    },
+    {
+      "name": "Singapore Polytechnic",
+      "role": "Strong in digital marketing, less in core CX/service",
+      "points": [
+        "Specialist Diploma in Digital Marketing & Analytics (NSDMA) leverages both Business and Media/Design schools",
+        "SP-SUSS Work-Study pathway into Digital Content Marketing gives it a fresh-grad talent pipeline story",
+        "Also expanding into Industrial AI training (Oct 2026) — signals appetite for AI-adjacent CET expansion generally"
+      ],
+      "tags": [
+        "Polytechnic",
+        "Marketing-led"
+      ]
+    },
+    {
+      "name": "Temasek Polytechnic",
+      "role": "Entry/modular service excellence, stackable to full diploma",
+      "points": [
+        "Customer Service Management modular unit stacks into Diploma in Business Practice (Business Administration)",
+        "Positioned as an accessible, lower-cost entry point rather than a specialist CX qualification",
+        "Runs its CET arm as the Temasek SkillsFuture Academy (TSA)"
+      ],
+      "tags": [
+        "Polytechnic",
+        "Modular entry point"
+      ]
+    },
+    {
+      "name": "ITE (short courses)",
+      "role": "Foundational, frontline/retail-oriented CX training",
+      "points": [
+        "Customer Experience Management Level 1 & 2 (WSQ) targets retail frontline and entry-level roles",
+        "Positioned as a feeder pathway — skills build toward store/floor management competencies",
+        "Broad SkillsFuture Series CoC catalogue includes service-adjacent design thinking modules"
+      ],
+      "tags": [
+        "ITE",
+        "Entry-level",
+        "Feeder pathway"
+      ]
+    },
+    {
+      "name": "ITE (Work-Study Diplomas)",
+      "role": "Fully employer-funded fresh-graduate pipeline — a structurally different competitive model, not a fee-based course",
+      "points": [
+        "4 relevant WSDip tracks found: CX Management (Lifestyle & Consumer), CX Management (Aviation Services), E-commerce & Retail, and Media Communication & Digital Marketing — all 30 months, day-release + on-the-job training",
+        "Programme fees are fully employer-sponsored (not learner-paid); SMEs get up to 90% funding via ETSS, on top of per-trainee support up to $15,000 for earlier intakes — a fundamentally different funding model to diploma/specialist-diploma CET",
+        "Curriculum reaches notably further into commercial/analytics territory than typical WSQ short courses — e.g. E-commerce & Retail WSDip covers retail analytics, category management and business strategy, not just frontline service",
+        "Named retail partners already in place (DFI Retail Group, Uniqlo, Sephora, Skechers) — signals live employer demand NYP could tap for its own work-study conversations",
+        "Competes for the same fresh-ITE-graduate talent pool NYP's own Work-Study Certificate programmes target — worth comparing pipeline overlap directly"
+      ],
+      "tags": [
+        "ITE",
+        "Work-Study",
+        "Employer-funded",
+        "4 tracks"
+      ]
+    },
+    {
+      "name": "SIM Academy",
+      "role": "Executive short-course competitor, leadership-CX crossover",
+      "points": [
+        "600+ course catalogue, 10,000+ professionals trained annually — high volume, high brand recognition",
+        "Positions CX within broader leadership/digital transformation/people management programming rather than as a standalone specialism",
+        "Active industry-partnership model aligned to national workforce priorities"
+      ],
+      "tags": [
+        "Private",
+        "Executive education",
+        "High volume"
+      ]
+    },
+    {
+      "name": "Industry academies (e.g. Singapore Airlines Academy)",
+      "role": "Bespoke, high-prestige B2B CX capability building — not in the public course directory",
+      "points": [
+        "SIA Academy's AIA Singapore engagement shows industry academies competing for large-enterprise CX transformation contracts, not individual learners",
+        "These programmes sit outside MySkillsFuture / SkillsFuture funding — a different competitive lane (bespoke consulting-style delivery, brand-led)",
+        "Represents both a competitive threat for large-enterprise partnerships and a potential co-delivery partner model to study"
+      ],
+      "tags": [
+        "Industry academy",
+        "Bespoke B2B",
+        "No public funding"
+      ]
+    }
+  ],
+  "trends": [
+    {
+      "h": "AI-in-CX is the fastest-rising skill demand signal",
+      "p": "SSG's 2025/2026 skills-cluster analysis shows Generative AI Principles and Applications as the fastest-growing skill nationally, and financial services / service sectors are actively deploying AI for chatbots, personalisation and robo-advisory within CX functions.",
+      "s": "SSG Jobs-Skills Portal, TAE Conference 2026"
+    },
+    {
+      "h": "Service excellence demand is broadening beyond retail/hospitality",
+      "p": "SSG's Skills Insights 2026 notes customer service excellence demand thriving across fulfilment operations, engineering services and healthcare/social services client-centric care — not just traditional frontline retail roles.",
+      "s": "SkillsFuture SG, Skills Insights 2026"
+    },
+    {
+      "h": "SSG has tightened course funding guidelines from 31 Dec 2025",
+      "p": "Funding for courses developing 'currently-demanded skills for a current job' is now more tightly scrutinised; SkillsFuture Series (emerging skills) and SCTP/qualification-level courses are exempt from the tightening — favouring programmes framed around emerging or career-transition skillsets.",
+      "s": "SSG Newsroom"
+    },
+    {
+      "h": "WSSG merger (SSG + WSG) lands Q4 2026",
+      "p": "Creates a single statutory board for training subsidies and career/employment services — likely to affect how CET providers coordinate funding applications with placement and hiring-incentive schemes going forward.",
+      "s": "SkillsFuture 2026 changes coverage"
+    },
+    {
+      "h": "Employer sentiment: skills scarcity in sales & marketing roles",
+      "p": "ManpowerGroup's 2025 Talent Shortage Survey cites Sales & Marketing among the roles most affected by skilled-talent shortages in Singapore (83% of employers report difficulty finding skilled talent, up from 79%).",
+      "s": "ManpowerGroup 2025 Talent Shortage Survey (via SIM Academy)"
+    },
+    {
+      "h": "Micro-credentials gaining ground over full qualifications for hiring",
+      "p": "Reported that a majority of Singapore employers now weight micro-certifications and demonstrable skills more heavily than traditional academic credentials in fast-moving skill areas — a pressure point for full-diploma-format CET design.",
+      "s": "Ministry of Manpower data (cited in employer skills coverage)"
+    }
+  ],
+  "funding": [
+    {
+      "h": "SkillsFuture Level-Up Programme expansion (4Q 2026)",
+      "p": "Catalogue expanding to ~200 WSQ full-qualification courses for mid-career Singaporeans aged 40+, spanning Healthcare, ICT, Engineering, Media and Early Childhood — worth watching whether Business/Service Excellence categories are added.",
+      "s": "SkillsFuture Budget update"
+    },
+    {
+      "h": "Revamped MySkillsFuture portal (2Q 2026)",
+      "p": "New portal includes AI-powered chatbot guidance, curated in-demand-skill recommendations and occupation-based course exploration — changes how learners discover CET programmes, with implications for course titling/SEO and how differentiated a programme needs to look.",
+      "s": "SkillsFuture Budget update"
+    },
+    {
+      "h": "Six months of free premium AI tool access for selected courses",
+      "p": "Learners completing selected AI-linked courses get complimentary premium AI tool subscriptions — a strong incentive lever if NYP builds an AI-augmented CX/service module.",
+      "s": "Budget 2026 coverage"
+    },
+    {
+      "h": "Enterprise Innovation Scheme: 400% tax deduction on AI expenditure",
+      "p": "Capped at $50,000 per YA for FY2027-28 — relevant when pitching employer-sponsored, AI-enabled CX/service transformation training to corporate partners.",
+      "s": "Budget 2026 coverage"
+    },
+    {
+      "h": "Adult Educator Registry CPD requirement from 1 April 2026",
+      "p": "Trainers on SSG-supported courses must complete 40 hrs CPD / 80 hrs practice every two years to remain registered — a quality bar that raises the operating cost of running SSG-funded CET, and a differentiator NYP can lean on if its own trainer bench is strong.",
+      "s": "SkillsFuture 2026 changes coverage"
+    }
+  ],
+  "gaps": [
+    {
+      "t": "AI-augmented CX / service delivery module",
+      "p": "No provider scanned has a dedicated, publicly-listed AI-in-CX module (chatbot design, AI-assisted service recovery, AI personalisation ethics) despite this being SSG's fastest-growing skill cluster and a live funding priority. NYP's existing CX&RM diploma could be refreshed with an AI-in-CX modular certificate, positioned to qualify for SkillsFuture Series (emerging skill) funding rather than the tightened 'current job skill' category."
+    },
+    {
+      "t": "Cross-sector service excellence (beyond retail/hospitality)",
+      "p": "SSG data shows service excellence demand broadening into fulfilment, engineering services and healthcare client-centric care — sectors where ITE, SP and TP's current service modules are largely retail-framed. A sector-agnostic or B2B/industrial service excellence track is comparatively unclaimed territory."
+    },
+    {
+      "t": "Mid-career, short-form CX leadership (not full diploma)",
+      "p": "SIM Academy's model (600+ short courses, high annual throughput) shows strong demand for bite-sized executive CX/leadership content. NYP's current CX&RM offering is diploma-heavy (900 hrs); a stackable short-course leadership track could capture the SIM-style executive learner NYP is currently not well positioned to serve."
+    },
+    {
+      "t": "Bespoke enterprise CX transformation partnerships",
+      "p": "Industry academies (e.g. Singapore Airlines Academy x AIA) are winning large-enterprise CX capability contracts outside the public funding system entirely. This is a different competitive lane — worth exploring as a co-delivery or advisory partnership model rather than a head-to-head course offering."
+    },
+    {
+      "t": "CRM/customer-data analytics depth",
+      "p": "SUSS's BUS354 and its Master of Digital Marketing analytics cluster suggest a university-level pull toward customer analytics; NYP's CX&RM diploma covers data analytics as one MC among five. A deeper, stackable customer-intelligence/analytics specialisation could defend NYP's ground against SUSS's degree-pathway pull."
+    }
+  ],
+  "partners": [
+    {
+      "name": "AIA Singapore × Singapore Airlines Academy model",
+      "role": "Reference case for a bespoke, large-enterprise CX capability partnership",
+      "points": [
+        "Shows an insurer partnering with a service-brand academy rather than an IHL — a competitive signal and a template NYP could pitch to similarly-sized enterprise clients",
+        "Workshops structured around mindset transformation + practical technique — a format NYP's Centre for Industry & Lifelong Learning (CIL3) could replicate for named accounts"
+      ]
+    },
+    {
+      "name": "Alibaba Cloud (existing NYP relationship)",
+      "role": "Extend from cloud/AI education into AI-powered CX applications",
+      "points": [
+        "NYP already partners with Alibaba Cloud on cloud computing/AI education for students — a natural extension into AI-in-CX applied modules (chatbots, personalisation) for the CET portfolio"
+      ]
+    },
+    {
+      "name": "Mediacorp / SGAG / Mothership (existing NYP relationships via Media & Communication Management)",
+      "role": "Marketing/content-side partnerships to extend into CX-adjacent content strategy CET",
+      "points": [
+        "Existing internship/project relationships from the Diploma in Media & Communication Management could be extended into CET-level content marketing or brand-experience short courses"
+      ]
+    },
+    {
+      "name": "SSG / WSSG (post-merger)",
+      "role": "Policy and funding-alignment partner as the WSSG merger completes in Q4 2026",
+      "points": [
+        "Early engagement on how Business/Service Excellence categories fit the expanded SkillsFuture Level-Up Programme catalogue could position NYP courses for inclusion ahead of competitors"
+      ]
+    }
+  ],
+  "summaryThreats": [
+    {
+      "t": "Republic Polytechnic's Specialist Diploma in CX Design & Analytics (78% overlap)",
+      "p": "Near-identical territory to NYP's flagship CX&RM diploma, co-developed with SUSS for added academic credibility — the single highest-overlap competitor programme tracked."
+    },
+    {
+      "t": "SUSS's BUS354 Customer Relationship Management (72% overlap)",
+      "p": "Credit-bearing and stackable to a full degree — appeals to learners wanting academic progression that NYP's diploma-only structure doesn't offer."
+    },
+    {
+      "t": "SIM Academy's high-volume executive short-course model",
+      "p": "600+ courses, 10,000+ learners/year in bite-sized formats NYP's diploma-heavy portfolio doesn't currently match (individual overlap is low, but aggregate reach is high)."
+    }
+  ],
+  "summaryOpps": [
+    {
+      "t": "AI-augmented CX module",
+      "p": "Fastest-growing SSG skill cluster, no direct competitor coverage found, and aligned to current funding priorities (SkillsFuture Series, AI tool subsidies)."
+    },
+    {
+      "t": "Cross-sector service excellence",
+      "p": "Demand broadening into fulfilment, engineering services and healthcare — largely unclaimed by retail-framed competitor offerings."
+    },
+    {
+      "t": "Stackable short-course CX leadership track",
+      "p": "Could capture the SIM-style executive learner segment NYP's current diploma format is not built to serve."
+    }
+  ],
+  "specs": [
+    {
+      "t": "Enrolment & completion volumes per competitor programme",
+      "p": "MySkillsFuture shows 'have attended' counts for some courses but not full enrolment trends over time — would need SSG TPGateway data access or IHL peer-benchmarking exchanges to track properly."
+    },
+    {
+      "t": "NYP's own enrolment, revenue and completion data by programme",
+      "p": "Pull from NYP's internal CET/CIL3 systems to sit alongside this external landscape view, so gap analysis compares actual NYP performance against market activity, not just curriculum content."
+    },
+    {
+      "t": "Job posting / hiring demand data for CX, RM, marketing and service roles",
+      "p": "MyCareersFuture or LinkedIn Talent Insights data on job posting volumes, salary bands and skill tags for target job families — sharper signal than course-supply data alone for spotting real gaps."
+    },
+    {
+      "t": "Historical price-point trend tracking",
+      "p": "A quarterly snapshot of competitor fee changes (post-subsidy) to catch pricing repositioning early — currently a one-time snapshot in this dashboard."
+    },
+    {
+      "t": "Regional (ASEAN) CET benchmark layer",
+      "p": "Malaysia (HRD Corp-funded), Indonesia (Kartu Prakerja) and Hong Kong (CEF) equivalents for CX/service/marketing training, useful if NYP considers regional CET delivery or transnational partnerships."
+    },
+    {
+      "t": "Alumni / employer satisfaction and outcomes data",
+      "p": "Graduate employment rate and starting salary data (from Graduate Employment Survey equivalents for CET, where available) to strengthen programme ROI arguments in portfolio reviews."
+    },
+    {
+      "t": "Curriculum currency tracker",
+      "p": "A simple 'last major curriculum refresh' date per NYP programme, cross-referenced against the skills-trend feed, to flag which NYP offerings are due for review."
+    }
+  ]
+}

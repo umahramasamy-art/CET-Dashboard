@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CET Market Intelligence Dashboard — CX / RM / Marketing / Service Excellence</title>
+<style>
+:root{
+  --navy:#12233d; --navy2:#1c3255; --teal:#0f6e56; --teal-l:#e1f5ee;
+  --amber:#854f0b; --amber-l:#faeeda; --coral:#993c1d; --coral-l:#faece7;
+  --ink:#1b1f27; --sub:#5b6472; --muted:#8a92a0; --line:#e4e7ec;
+  --bg:#f6f7f9; --card:#ffffff; --nyp:#0c447c; --nyp-l:#e6f1fb;
+  --gap:#993556; --gap-l:#fbeaf0;
+  --radius:10px;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px 60px;}
+header.top{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:28px 20px 24px;}
+header.top .wrap{padding:0 20px;}
+.eyebrow{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9fb3d1;font-weight:600;margin-bottom:6px;}
+h1{font-size:24px;margin:0 0 6px;font-weight:600;}
+.sub{color:#c3d0e3;font-size:14px;max-width:820px;line-height:1.55;}
+.meta-row{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap;}
+.meta-pill{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:5px 12px;font-size:12px;color:#dbe4f0;}
+
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:-22px 0 22px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:0 1px 2px rgba(16,24,40,0.04);}
+.kpi .num{font-size:22px;font-weight:700;color:var(--navy);}
+.kpi .lbl{font-size:11.5px;color:var(--sub);margin-top:2px;line-height:1.3;}
+
+nav.tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin:8px 0 20px;flex-wrap:wrap;position:sticky;top:0;background:var(--bg);z-index:10;padding-top:6px;}
+nav.tabs button{background:none;border:none;padding:10px 14px;font-size:13.5px;font-weight:600;color:var(--sub);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;}
+nav.tabs button.active{color:var(--navy);border-bottom-color:var(--navy);}
+nav.tabs button:hover{color:var(--navy);}
+
+.panel{display:none;}
+.panel.active{display:block;}
+
+.section-title{font-size:16px;font-weight:700;color:var(--navy);margin:26px 0 4px;}
+.section-note{font-size:12.5px;color:var(--sub);margin-bottom:14px;line-height:1.5;}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;}
+.filters select,.filters input{border:1px solid var(--line);border-radius:6px;padding:7px 10px;font-size:13px;background:#fff;color:var(--ink);}
+.filters input[type=text]{flex:1;min-width:180px;}
+.filters .count{font-size:12.5px;color:var(--sub);align-self:center;margin-left:auto;}
+
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:12.8px;}
+thead th{background:#f0f2f5;text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--sub);border-bottom:1px solid var(--line);white-space:nowrap;}
+tbody td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top;}
+tbody tr:hover{background:#fafbfc;}
+tbody tr:last-child td{border-bottom:none;}
+.pname{font-weight:600;color:var(--ink);}
+.ptype{display:inline-block;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:10px;margin-top:3px;}
+.tag{display:inline-block;font-size:10.5px;background:#eef0f3;color:var(--sub);border-radius:5px;padding:2px 6px;margin:1px 3px 1px 0;}
+.overlap-high{color:#7a2e15;font-weight:700;}
+.overlap-med{color:var(--amber);font-weight:700;}
+.overlap-low{color:var(--teal);font-weight:700;}
+.overlap-none{color:var(--muted);font-weight:600;}
+
+.conf{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:1px 6px;border-radius:8px;margin-left:6px;vertical-align:1px;}
+.conf-verified{background:var(--teal-l);color:var(--teal);}
+.conf-estimated{background:var(--amber-l);color:var(--amber);}
+.conf-unconfirmed{background:#f1eefe;color:#5b6472;}
+
+thead th.sortable{cursor:pointer;user-select:none;}
+thead th.sortable:hover{color:var(--navy);}
+thead th.sortable .arrow{font-size:9px;margin-left:3px;opacity:.5;}
+thead th.sortable.sorted .arrow{opacity:1;}
+
+.toolbar-btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:7px 12px;font-size:12.5px;font-weight:600;color:var(--navy);cursor:pointer;}
+.toolbar-btn:hover{background:#f0f2f5;}
+
+@media print{
+  nav.tabs{display:none;}
+  .panel{display:block !important;page-break-after:always;}
+  .filters,.toolbar-btn{display:none;}
+  body{background:#fff;}
+  header.top{background:var(--navy) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+.type-poly{background:var(--nyp-l);color:var(--nyp);}
+.type-uni{background:#f1eefe;color:#3c3489;}
+.type-ite{background:var(--amber-l);color:var(--amber);}
+.type-private{background:var(--gap-l);color:var(--gap);}
+.type-industry{background:var(--teal-l);color:var(--teal);}
+.type-itews{background:#e8f5fc;color:#0a5c8a;}
+.type-nyp{background:var(--navy);color:#fff;}
+
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:10px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;}
+.card h3{margin:0 0 4px;font-size:14.5px;color:var(--navy);}
+.card .role{font-size:12px;color:var(--sub);margin-bottom:10px;}
+.card p{font-size:12.8px;color:var(--sub);line-height:1.55;margin:6px 0;}
+.card ul{margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--sub);line-height:1.6;}
+.badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.badge{font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:10px;background:#eef0f3;color:var(--sub);}
+
+.two-col{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;}
+@media (max-width:900px){.two-col{grid-template-columns:1fr;} .kpi-row{grid-template-columns:repeat(2,1fr);}}
+
+.trend-item{border-left:3px solid var(--teal);padding:10px 14px;margin-bottom:10px;background:var(--card);border-radius:0 8px 8px 0;border:1px solid var(--line);border-left:3px solid var(--teal);}
+.trend-item h4{margin:0 0 4px;font-size:13.5px;color:var(--ink);}
+.trend-item p{margin:0;font-size:12.5px;color:var(--sub);line-height:1.55;}
+.trend-item .src{font-size:10.5px;color:var(--muted);margin-top:5px;}
+
+.opp-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:0 10px 10px 0;padding:14px 16px;margin-bottom:12px;}
+.opp-card h4{margin:0 0 5px;font-size:13.5px;color:var(--navy);}
+.opp-card p{margin:0;font-size:12.7px;color:var(--sub);line-height:1.6;}
+.opp-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;background:var(--gap-l);color:var(--gap);padding:2px 8px;border-radius:9px;margin-bottom:6px;}
+
+.footnote{font-size:11.5px;color:var(--muted);margin-top:30px;padding-top:14px;border-top:1px solid var(--line);line-height:1.6;}
+.src-link{color:var(--nyp);text-decoration:none;}
+.gap-fill{background:var(--gap-l);color:var(--gap);}
+button:focus-visible,select:focus-visible,input:focus-visible,th.sortable:focus-visible{outline:2px solid var(--nyp);outline-offset:2px;}
+nav.tabs button[tabindex],th.sortable{tabindex:0;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">NYP · Curriculum Planning &amp; Market Intelligence</div>
+    <h1>CET Landscape Dashboard — Customer Experience, Relationship Management, Marketing &amp; Service Excellence</h1>
+    <div class="sub">Tracks programme activity across Polytechnics, Universities and ITE in Singapore, benchmarks against NYP's current portfolio, and surfaces skills, funding and partnership signals relevant to future programme development.</div>
+    <div class="meta-row">
+      <span class="meta-pill">Scope: Polytechnics · Universities · ITE (short-course + Work-Study)</span>
+      <span class="meta-pill" id="pill-lastupdated">Snapshot: loading…</span>
+      <span class="meta-pill" id="pill-count">— programmes tracked</span>
+      <span class="meta-pill">Directional — verify before decisions</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="load-status" style="display:none;padding:8px 14px;border-radius:var(--radius);font-size:12.5px;margin-bottom:14px;"></div>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="num">7</div><div class="lbl">Providers scanned with active CX/RM/Marketing/Service programmes</div></div>
+    <div class="kpi"><div class="num">78%</div><div class="lbl">Highest single-programme overlap with NYP's CX&amp;RM diploma (Republic Poly)</div></div>
+    <div class="kpi"><div class="num gap-fill" style="display:inline;padding:0 4px;border-radius:4px;">AI×CX</div><div class="lbl">Fastest-rising skill cluster across all providers scanned</div></div>
+    <div class="kpi"><div class="num">2026</div><div class="lbl">SSG funding framework tightened (from 31 Dec 2025) — affects course design</div></div>
+    <div class="kpi"><div class="num">4</div><div class="lbl">Potential industry partnership leads identified this scan</div></div>
+  </div>
+
+  <nav class="tabs" style="justify-content:space-between;">
+    <div style="display:flex;gap:4px;flex-wrap:wrap;">
+      <button class="tab-btn active" data-tab="summary">Executive summary</button>
+      <button class="tab-btn" data-tab="programmes">Programme landscape</button>
+      <button class="tab-btn" data-tab="competitors">Competitor profiles</button>
+      <button class="tab-btn" data-tab="market">Market intelligence</button>
+      <button class="tab-btn" data-tab="gaps">Gaps &amp; opportunities</button>
+      <button class="tab-btn" data-tab="dashboard-spec">Dashboard build notes</button>
+      <button class="tab-btn" data-tab="mc-reference">NYP MC reference</button>
+    </div>
+    <div style="display:flex;gap:8px;align-self:center;">
+      <button class="toolbar-btn" id="btn-refresh" style="font-weight:700;">↻ Refresh data</button>
+      <button class="toolbar-btn" id="btn-export">Export table (CSV)</button>
+      <button class="toolbar-btn" id="btn-print">Print / save PDF</button>
+    </div>
+  </nav>
+
+  <!-- EXECUTIVE SUMMARY TAB -->
+  <div class="panel active" id="panel-summary">
+    <div class="section-title">At a glance</div>
+    <div class="section-note">One-screen synthesis for leadership review. Full detail and sourcing sits in the tabs to the right.</div>
+    <div class="two-col">
+      <div>
+        <h4 style="font-size:13.5px;color:var(--navy);margin:0 0 8px;">Top 3 threats to NYP's CX/RM portfolio</h4>
+        <div id="summary-threats"></div>
+      </div>
+      <div>
+        <h4 style="font-size:13.5px;color:var(--navy);margin:0 0 8px;">Top 3 opportunities</h4>
+        <div id="summary-opps"></div>
+      </div>
+    </div>
+    <h4 style="font-size:13.5px;color:var(--navy);margin:26px 0 8px;">Top partnership leads</h4>
+    <div id="summary-partners"></div>
+  </div>
+
+  <!-- PROGRAMMES TAB -->
+  <div class="panel" id="panel-programmes">
+    <div class="section-title">Programme inventory</div>
+    <div class="section-note">Search and filter tracked programmes. "NYP overlap" and "% overlap" now assess curriculum alignment against NYP's actual published module synopsis for the Diploma in Business Practice (CX &amp; RM) — 20 named modules across 5 modular certificates (900 hrs total). The percentage estimates how much of each competitor programme's own curriculum maps onto the specific NYP module(s) listed in "Benchmarked vs." — it is an analyst reading of published learning outcomes, not a formal curriculum audit. See the "NYP MC reference" tab for the full module list. NYP's own courses show N/A as the self-reference baseline.</div>
+
+    <div style="background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;margin-bottom:14px;font-size:12px;color:var(--sub);">
+      <strong style="color:var(--navy);">NYP modular certificate (MC) key</strong> — chip colour indicates which MC each benchmarked module belongs to. Hover a chip in the table for the full module name; see "NYP MC reference" tab for complete synopses.
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;">
+        <span class="tag" style="border-left:2px solid #3c3489;padding-left:5px;">MC1 Business Essentials & Data Analytics</span>
+        <span class="tag" style="border-left:2px solid #5f5e5a;padding-left:5px;">MC2 Business Operations & Management</span>
+        <span class="tag" style="border-left:2px solid #0f6e56;padding-left:5px;">MC3 Service Management</span>
+        <span class="tag" style="border-left:2px solid #993556;padding-left:5px;">MC4 Service Marketing</span>
+        <span class="tag" style="border-left:2px solid #0c447c;padding-left:5px;">MC5 CX Design & Management</span>
+      </div>
+    </div>
+
+    <div class="filters">
+      <select id="f-provider"><option value="">All provider types</option></select>
+      <select id="f-area"><option value="">All skill areas</option></select>
+      <select id="f-overlap"><option value="">All overlap levels</option><option value="High">High overlap</option><option value="Medium">Medium overlap</option><option value="Low">Low overlap</option><option value="None">No overlap (whitespace)</option></select>
+      <input type="text" id="f-search" placeholder="Search programme, provider or skill...">
+      <span class="count" id="f-count"></span>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="sortable" data-key="name">Programme <span class="arrow">▾</span></th>
+          <th class="sortable" data-key="provider">Provider <span class="arrow">▾</span></th>
+          <th>Level</th>
+          <th class="sortable" data-key="duration">Duration <span class="arrow">▾</span></th>
+          <th class="sortable" data-key="feeNum">Fee (full) <span class="arrow">▾</span></th>
+          <th>Funding support</th>
+          <th>Key skills / focus</th>
+          <th class="sortable" data-key="overlapRank">NYP overlap <span class="arrow">▾</span></th>
+          <th class="sortable" data-key="overlapPct">% overlap <span class="arrow">▾</span></th>
+          <th>Benchmarked vs. (NYP module)</th>
+        </tr>
+      </thead>
+      <tbody id="prog-tbody"></tbody>
+    </table>
+  </div>
+
+  <!-- COMPETITORS TAB -->
+  <div class="panel" id="panel-competitors">
+    <div class="section-title">Competitor profiles</div>
+    <div class="section-note">Directional profiles based on publicly listed CET activity in CX / RM / Marketing / Service Excellence. Depth of catalogue and positioning, not exhaustive course counts.</div>
+    <div class="grid-cards" id="competitor-cards"></div>
+  </div>
+
+  <!-- MARKET TAB -->
+  <div class="panel" id="panel-market">
+    <div class="two-col">
+      <div>
+        <div class="section-title">Skills &amp; workforce trends</div>
+        <div id="trend-list"></div>
+      </div>
+      <div>
+        <div class="section-title">Funding &amp; policy signals</div>
+        <div id="funding-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAPS TAB -->
+  <div class="panel" id="panel-gaps">
+    <div class="section-title">Programme gaps &amp; market opportunities</div>
+    <div class="section-note">Areas where demand signals (skills trend data, employer partnerships, funding direction) are outpacing visible CET supply in the CX/RM/Marketing/Service Excellence space — candidate territory for new or refreshed NYP programmes.</div>
+    <div id="gap-list"></div>
+
+    <div class="section-title" style="margin-top:32px;">Potential industry partnership leads</div>
+    <div class="section-note">Organisations recently visible in CX/service capability-building activity — signal for co-development, work-study, or curriculum advisory conversations.</div>
+    <div class="grid-cards" id="partner-cards"></div>
+  </div>
+
+  <!-- SPEC TAB -->
+  <div class="panel" id="panel-dashboard-spec">
+    <div class="section-title">What else this dashboard should track (recommended additions)</div>
+    <div class="section-note">To operationalise this as a living planning tool, consider layering in the following data — most requires internal access or a paid intelligence source rather than public web search.</div>
+    <div id="spec-list"></div>
+  </div>
+
+  <!-- MC REFERENCE TAB -->
+  <div class="panel" id="panel-mc-reference">
+    <div class="section-title">NYP Diploma in Business Practice (CX&amp;RM) — official module structure</div>
+    <div class="section-note">Source: NYP module synopsis document. All % overlap and "Benchmarked vs." figures elsewhere in this dashboard are estimated against this actual module list (20 modules, 5 MCs, 900 hrs total) rather than MC titles alone.</div>
+    <div id="mc-reference-table"></div>
+  </div>
+
+  <div class="footnote">
+    This is a directional, quick-scan snapshot built from public sources (MySkillsFuture course directory, institution websites, SkillsFuture Singapore newsroom, industry press) in August 2026, cross-referenced against NYP's own published module synopsis for the CX&amp;RM diploma. Fees and funding figures shown are indicative and subsidy-dependent — always verify against MySkillsFuture and the training provider before using in planning documents. Programme inventory is illustrative of the current landscape, not exhaustive of every course offered by every institution. Module-level overlap estimates are an analyst reading of published learning outcomes, not a formal curriculum audit.
+  </div>
+</div>
+
+<script>
+// ===== Static lookups (not data-driven — stable presentation config) =====
+const providerTypeLabels = {nyp:"NYP (own)", poly:"Polytechnic", uni:"University", ite:"ITE (short course)", "ite-ws":"ITE (Work-Study)", private:"Private provider", industry:"Industry academy"};
+const providerTypeClass = {nyp:"type-nyp", poly:"type-poly", uni:"type-uni", ite:"type-ite", "ite-ws":"type-itews", private:"type-private", industry:"type-industry"};
+const overlapRankMap = {"High":3,"Medium":2,"Low":1,"None":0,"—":-1};
+const mcLookup = {
+  MC1:"MC1 — Business Essentials & Data Analytics",
+  MC2:"MC2 — Business Operations & Management",
+  MC3:"MC3 — Service Management",
+  MC4:"MC4 — Service Marketing",
+  MC5:"MC5 — Customer Experience Design & Management",
+};
+const mcColor = {MC1:"#3c3489",MC2:"#5f5e5a",MC3:"#0f6e56",MC4:"#993556",MC5:"#0c447c"};
+const confLabel = {verified:"Verified", estimated:"Estimated", unconfirmed:"Unconfirmed"};
+
+function overlapClassFromText(t){
+  if(t==="High") return "overlap-high";
+  if(t==="Medium") return "overlap-med";
+  if(t==="Low") return "overlap-low";
+  return "overlap-none";
+}
+
+// ===== Mutable state, populated from data.json on each fetch =====
+let programmes = [];
+let moduleToMC = {};
+let sortKey = null;
+let sortDir = 1;
+let lastFiltered = [];
+let DATA = null;
+
+const DATA_URL = './data.json';
+
+async function fetchAndInit(isRefresh){
+  const statusEl = document.getElementById('load-status');
+  const refreshBtn = document.getElementById('btn-refresh');
+  statusEl.style.display = 'block';
+  statusEl.style.background = 'var(--nyp-l)';
+  statusEl.style.color = 'var(--nyp)';
+  statusEl.textContent = isRefresh ? 'Refreshing data…' : 'Loading data…';
+  if(refreshBtn){ refreshBtn.disabled = true; refreshBtn.style.opacity = '0.6'; }
+  try{
+    const res = await fetch(DATA_URL + '?t=' + Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    initDashboard(data);
+    statusEl.style.background = 'var(--teal-l)';
+    statusEl.style.color = 'var(--teal)';
+    statusEl.textContent = isRefresh ? 'Data refreshed successfully.' : 'Data loaded.';
+    setTimeout(()=>{ statusEl.style.display = 'none'; }, 3000);
+  }catch(err){
+    statusEl.style.background = 'var(--coral-l)';
+    statusEl.style.color = 'var(--coral)';
+    statusEl.textContent = 'Could not load data.json (' + err.message + '). Showing last successfully loaded data, if any. Check that data.json is published alongside this page.';
+  }finally{
+    if(refreshBtn){ refreshBtn.disabled = false; refreshBtn.style.opacity = '1'; }
+  }
+}
+
+function initDashboard(data){
+  DATA = data;
+
+  // Build module registry lookup
+  moduleToMC = {};
+  (data.nypModuleRegistry || []).forEach(m=>{ moduleToMC[m.module] = m.mc; });
+
+  // Compute derived fields on programmes
+  programmes = (data.programmes || []).map(p=>{
+    const nypModules = (data.nypModuleMap && data.nypModuleMap[p.name]) || [];
+    const nypMC = [...new Set(nypModules.map(m=>moduleToMC[m]))];
+    const rationale = (data.rationaleMap && data.rationaleMap[p.name]) || "";
+    return Object.assign({}, p, {nypModules, nypMC, rationale, overlapRank: overlapRankMap[p.overlap]});
+  });
+
+  // Header pills
+  const lastUpdated = data.meta && data.meta.lastUpdated ? new Date(data.meta.lastUpdated) : null;
+  document.getElementById('pill-lastupdated').textContent = lastUpdated
+    ? 'Data as of: ' + lastUpdated.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) + ' ' + lastUpdated.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'})
+    : 'Data as of: unknown';
+  document.getElementById('pill-count').textContent = programmes.length + ' programmes tracked';
+
+  populateFilters();
+  renderTable();
+  renderCompetitors(data.competitors || []);
+  renderTrends(data.trends || []);
+  renderFunding(data.funding || []);
+  renderGaps(data.gaps || []);
+  renderPartners(data.partners || []);
+  renderSummary(data.summaryThreats || [], data.summaryOpps || [], data.partners || []);
+  renderSpecs(data.specs || []);
+  renderMCReference(data.nypModuleRegistry || []);
+}
+
+function clearContainer(id){
+  const el = document.getElementById(id);
+  if(el) el.innerHTML = '';
+}
+
+function populateFilters(){
+  const provSel = document.getElementById('f-provider');
+  const areaSel = document.getElementById('f-area');
+  provSel.innerHTML = '<option value="">All provider types</option>';
+  areaSel.innerHTML = '<option value="">All skill areas</option>';
+  const types = [...new Set(programmes.map(p=>p.type))];
+  types.forEach(t=>{
+    const o=document.createElement('option'); o.value=t; o.textContent=providerTypeLabels[t]||t; provSel.appendChild(o);
+  });
+  const areas = [...new Set(programmes.map(p=>p.area))];
+  areas.forEach(a=>{
+    const o=document.createElement('option'); o.value=a; o.textContent=a; areaSel.appendChild(o);
+  });
+}
+
+function renderTable(){
+  const provF = document.getElementById('f-provider').value;
+  const areaF = document.getElementById('f-area').value;
+  const overlapF = document.getElementById('f-overlap').value;
+  const searchF = document.getElementById('f-search').value.toLowerCase();
+  const tbody = document.getElementById('prog-tbody');
+  tbody.innerHTML = '';
+  let filtered = programmes.filter(p=>{
+    if(provF && p.type!==provF) return false;
+    if(areaF && p.area!==areaF) return false;
+    if(overlapF && p.overlap!==overlapF) return false;
+    const hay = (p.name+' '+p.provider+' '+p.skills+' '+p.area).toLowerCase();
+    if(searchF && !hay.includes(searchF)) return false;
+    return true;
+  });
+  if(sortKey){
+    filtered.sort((a,b)=>{
+      let av=a[sortKey], bv=b[sortKey];
+      if(av===null||av===undefined) av = (typeof bv==='number') ? -Infinity : '';
+      if(bv===null||bv===undefined) bv = (typeof av==='number') ? -Infinity : '';
+      if(typeof av==='string'){ av=av.toLowerCase(); bv=bv.toLowerCase(); }
+      if(av<bv) return -1*sortDir;
+      if(av>bv) return 1*sortDir;
+      return 0;
+    });
+  }
+  lastFiltered = filtered;
+  filtered.forEach(p=>{
+    const tr = document.createElement('tr');
+    const hasRationale = p.rationale && p.rationale.length > 0;
+    tr.innerHTML = `
+      <td><div class="pname">${p.name}</div><div class="tag">${p.cert}</div></td>
+      <td>${p.provider}<br><span class="ptype ${providerTypeClass[p.type]}">${providerTypeLabels[p.type]}</span></td>
+      <td>${p.level}</td>
+      <td>${p.duration}</td>
+      <td>${p.fee}<span class="conf conf-${p.conf}">${confLabel[p.conf]}</span></td>
+      <td style="max-width:160px;">${p.funding}</td>
+      <td style="max-width:220px;">${p.skills}</td>
+      <td class="${overlapClassFromText(p.overlap)}">${p.overlap}</td>
+      <td>${p.overlapPct===null ? '<span style="color:var(--muted);">N/A (own)</span>' : `<div style="display:flex;align-items:center;gap:6px;"><div style="flex:1;height:6px;background:#eef0f3;border-radius:3px;overflow:hidden;min-width:50px;"><div style="height:100%;width:${p.overlapPct}%;background:${p.overlapPct>=60?'#993c1d':p.overlapPct>=35?'var(--amber)':'var(--teal)'};"></div></div><span style="font-size:11.5px;font-weight:700;color:var(--ink);min-width:28px;">${p.overlapPct}%</span></div>${hasRationale ? `<button class="why-btn" style="margin-top:4px;background:none;border:none;color:var(--nyp);font-size:11px;font-weight:600;cursor:pointer;padding:0;">Why this %? <span class="why-arrow">▾</span></button>` : ''}`}</td>
+      <td style="max-width:190px;">${(p.nypModules&&p.nypModules.length) ? p.nypModules.map(mod=>`<span class="tag" title="${mcLookup[moduleToMC[mod]]}" style="border-left:2px solid ${mcColor[moduleToMC[mod]]};padding-left:5px;display:block;margin-bottom:3px;">${mod}</span>`).join('') : '<span style="color:var(--muted);font-size:11px;">— (is the diploma)</span>'}</td>
+    `;
+    tbody.appendChild(tr);
+
+    if(hasRationale){
+      const detailTr = document.createElement('tr');
+      detailTr.className = 'rationale-row';
+      detailTr.style.display = 'none';
+      detailTr.innerHTML = `<td colspan="9" style="background:var(--bg);padding:12px 16px;font-size:12.5px;color:var(--sub);line-height:1.6;border-bottom:1px solid var(--line);"><strong style="color:var(--navy);">Why this overlap %:</strong> ${p.rationale}</td>`;
+      tbody.appendChild(detailTr);
+      const whyBtn = tr.querySelector('.why-btn');
+      if(whyBtn){
+        whyBtn.addEventListener('click', ()=>{
+          const isHidden = detailTr.style.display === 'none';
+          detailTr.style.display = isHidden ? 'table-row' : 'none';
+          whyBtn.querySelector('.why-arrow').textContent = isHidden ? '▴' : '▾';
+        });
+      }
+    }
+  });
+  document.getElementById('f-count').textContent = filtered.length + ' of ' + programmes.length + ' programmes';
+}
+
+document.getElementById('f-provider').addEventListener('change', renderTable);
+document.getElementById('f-area').addEventListener('change', renderTable);
+document.getElementById('f-overlap').addEventListener('change', renderTable);
+document.getElementById('f-search').addEventListener('input', renderTable);
+
+document.querySelectorAll('th.sortable').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.key;
+    if(sortKey===key){ sortDir *= -1; } else { sortKey = key; sortDir = 1; }
+    document.querySelectorAll('th.sortable').forEach(h=>{h.classList.remove('sorted'); h.querySelector('.arrow').textContent='▾';});
+    th.classList.add('sorted');
+    th.querySelector('.arrow').textContent = sortDir===1 ? '▾' : '▴';
+    renderTable();
+  });
+});
+
+document.getElementById('btn-export').addEventListener('click', ()=>{
+  const rows = [['Programme','Provider','Provider type','Level','Duration','Fee','Confidence','Funding support','Key skills','NYP overlap','% overlap','Benchmarked vs (NYP module)','Certification']];
+  lastFiltered.forEach(p=>{
+    const mcText = (p.nypModules&&p.nypModules.length) ? p.nypModules.join(' | ') : (p.overlapPct===null ? 'Is the diploma (self)' : 'N/A');
+    rows.push([p.name,p.provider,providerTypeLabels[p.type],p.level,p.duration,p.fee,confLabel[p.conf],p.funding,p.skills,p.overlap,(p.overlapPct===null?'N/A':p.overlapPct+'%'),mcText,p.cert]);
+  });
+  const csv = rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'cet_programme_landscape.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById('btn-print').addEventListener('click', ()=>{
+  document.querySelectorAll('.panel').forEach(p=>p.classList.add('active'));
+  window.print();
+  setTimeout(()=>{
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    document.getElementById('panel-'+document.querySelector('.tab-btn.active').dataset.tab).classList.add('active');
+  }, 300);
+});
+
+document.getElementById('btn-refresh').addEventListener('click', ()=>{
+  fetchAndInit(true);
+});
+
+// TAB SWITCHING
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ===== Render functions for static-content tabs =====
+function renderCompetitors(competitors){
+  clearContainer('competitor-cards');
+  const compContainer = document.getElementById('competitor-cards');
+  competitors.forEach(c=>{
+    const div = document.createElement('div');
+    div.className='card';
+    div.innerHTML = `<h3>${c.name}</h3><div class="role">${c.role}</div><ul>${c.points.map(p=>`<li>${p}</li>`).join('')}</ul><div class="badge-row">${c.tags.map(t=>`<span class="badge">${t}</span>`).join('')}</div>`;
+    compContainer.appendChild(div);
+  });
+}
+
+function renderTrends(trends){
+  clearContainer('trend-list');
+  const trendList = document.getElementById('trend-list');
+  trends.forEach(t=>{
+    const div=document.createElement('div'); div.className='trend-item';
+    div.innerHTML=`<h4>${t.h}</h4><p>${t.p}</p><div class="src">Source: ${t.s}</div>`;
+    trendList.appendChild(div);
+  });
+}
+
+function renderFunding(funding){
+  clearContainer('funding-list');
+  const fundingList = document.getElementById('funding-list');
+  funding.forEach(t=>{
+    const div=document.createElement('div'); div.className='trend-item'; div.style.borderLeftColor='var(--amber)';
+    div.innerHTML=`<h4>${t.h}</h4><p>${t.p}</p><div class="src">Source: ${t.s}</div>`;
+    fundingList.appendChild(div);
+  });
+}
+
+function renderGaps(gaps){
+  clearContainer('gap-list');
+  const gapList = document.getElementById('gap-list');
+  gaps.forEach(g=>{
+    const div=document.createElement('div'); div.className='opp-card';
+    div.innerHTML=`<span class="opp-tag">Gap</span><h4>${g.t}</h4><p>${g.p}</p>`;
+    gapList.appendChild(div);
+  });
+}
+
+function renderPartners(partners){
+  clearContainer('partner-cards');
+  const partnerContainer = document.getElementById('partner-cards');
+  partners.forEach(p=>{
+    const div=document.createElement('div'); div.className='card';
+    div.innerHTML=`<h3>${p.name}</h3><div class="role">${p.role}</div><ul>${p.points.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+    partnerContainer.appendChild(div);
+  });
+}
+
+function renderSummary(summaryThreats, summaryOpps, partners){
+  clearContainer('summary-threats');
+  clearContainer('summary-opps');
+  clearContainer('summary-partners');
+  const stC = document.getElementById('summary-threats');
+  summaryThreats.forEach(x=>{const d=document.createElement('div');d.className='opp-card';d.style.borderLeftColor='#993c1d';d.innerHTML=`<h4>${x.t}</h4><p>${x.p}</p>`;stC.appendChild(d);});
+  const soC = document.getElementById('summary-opps');
+  summaryOpps.forEach(x=>{const d=document.createElement('div');d.className='opp-card';d.style.borderLeftColor='var(--teal)';d.innerHTML=`<h4>${x.t}</h4><p>${x.p}</p>`;soC.appendChild(d);});
+  const spC = document.getElementById('summary-partners');
+  partners.slice(0,3).forEach(p=>{const d=document.createElement('div');d.className='opp-card';d.style.borderLeftColor='var(--nyp)';d.innerHTML=`<h4>${p.name}</h4><p>${p.role}</p>`;spC.appendChild(d);});
+}
+
+function renderSpecs(specs){
+  clearContainer('spec-list');
+  const specList = document.getElementById('spec-list');
+  specs.forEach(s=>{
+    const div=document.createElement('div'); div.className='card'; div.style.marginBottom='12px';
+    div.innerHTML=`<h3>${s.t}</h3><p>${s.p}</p>`;
+    specList.appendChild(div);
+  });
+}
+
+function renderMCReference(nypModuleRegistry){
+  clearContainer('mc-reference-table');
+  const mcRefContainer = document.getElementById('mc-reference-table');
+  const mcGroups = {};
+  nypModuleRegistry.forEach(m=>{
+    if(!mcGroups[m.mc]) mcGroups[m.mc] = {mcName:m.mcName, modules:[]};
+    mcGroups[m.mc].modules.push(m);
+  });
+  Object.keys(mcGroups).sort().forEach(mcCode=>{
+    const g = mcGroups[mcCode];
+    const totalHrs = g.modules.reduce((s,m)=>s+m.hrs,0);
+    const section = document.createElement('div');
+    section.style.marginBottom = '20px';
+    const rows = g.modules.map(m=>{
+      const usedBy = programmes.filter(p=>p.nypModules && p.nypModules.includes(m.module));
+      const usedByText = usedBy.length ? usedBy.map(p=>p.provider).join(', ') : '—';
+      return `<tr><td style="padding:8px 10px;border-bottom:1px solid var(--line);font-size:12.5px;">${m.module}</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--sub);">${m.hrs} hrs</td><td style="padding:8px 10px;border-bottom:1px solid var(--line);font-size:12px;color:var(--sub);">${usedByText}</td></tr>`;
+    }).join('');
+    section.innerHTML = `
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px;">
+        <h3 style="font-size:14.5px;color:var(--navy);margin:0;border-left:3px solid ${mcColor[mcCode]};padding-left:8px;">${mcCode} — ${g.mcName}</h3>
+        <span style="font-size:11.5px;color:var(--muted);">${totalHrs} hrs total, ${g.modules.length} modules</span>
+      </div>
+      <table style="width:100%;">
+        <thead><tr><th style="width:45%;">Module</th><th style="width:15%;">Duration</th><th>Benchmarked against by (this scan)</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+    mcRefContainer.appendChild(section);
+  });
+}
+
+// ===== Boot =====
+fetchAndInit(false);
+</script>
+
+</body>
+</html>
